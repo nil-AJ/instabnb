@@ -1,5 +1,5 @@
 {
-    "authors": ["Louis VALLEE","Nil JULITE"],
+    "authors":[{"name": "Louis VALLEE"},{"name":"Nil JULITE"}],
     "type": "project",
     "license": "proprietary",
     "require": {
