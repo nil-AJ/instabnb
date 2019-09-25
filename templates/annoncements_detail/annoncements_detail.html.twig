@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+
     {{ id }}
+
     <a href="{{ path('annoucements',{'id':id}) }}">retour à la liste</a>
 
 {% endblock %}

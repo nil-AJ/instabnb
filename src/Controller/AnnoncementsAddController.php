@@ -27,10 +27,10 @@ class AnnoncementsAddController extends abstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // $entityManager = $this->getDoctrine()->getManager();
-            // $entityManager->persist($task);
-            // $entityManager->flush();
-//            $data = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($product);
+            $entityManager->flush();
+            $data = $form->getData();
 //            var_dump($data);
             return $this->redirectToRoute('home');
         }
@@ -38,5 +38,8 @@ class AnnoncementsAddController extends abstractController
         return $this->render('annoncements_add/annoncements_add.html.twig', [
             'form' => $form->createView(),
         ]);
+
+
     }
+
 }

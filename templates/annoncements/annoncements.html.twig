@@ -10,7 +10,7 @@
                                 {{ tableau.title }}<br>
                                 {{ tableau.content }}<br/>
                                  {{ tableau.price }}<br/>
-                              {{ tableau.createdDate }}</p><br/>
+                              {{ tableau.createdAt | date("m/d/Y") }}</p><br/>
                             <a href="{{ path('annoncementsDetail',{'id':tableau.id}) }}" class="waves-effect waves-light btn">detail</a>
                         </div>
                     </div>

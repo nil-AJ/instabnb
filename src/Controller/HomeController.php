@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Annoncement;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,19 +15,11 @@ class HomeController extends abstractController
      */
     public function home()
     {
-        $tableau=[['id' => '1',
-            'title' => 'Akram',
-            'content' => 'num 1',
-            'price' => '1',
-            'createdDate' => ''],
 
-            ['id' => '2',
-                'title' => 'Romu',
-                'content' => 'num 2',
-                'price' => '2',
-                'createdDate' => '']];
-        return $this->render('home/home.html.twig',
-            ['tableau'=>$tableau]);
+
+        $em = $this->getDoctrine()->getManager();
+        $tableau = $em->getRepository(Annoncement::class)->findTableau(2);
+        return $this->render('home/home.html.twig',['tableau'=>$tableau]);
 
     }
 }
