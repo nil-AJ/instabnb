@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+
+
+        <div style="text-align: center" class="row">
+            {% for tableau in tableau %}
+                <div class="col s8 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <p>
+                                {{ tableau.id }}<br/>
+                                {{ tableau.title }}<br/>
+                                {{ tableau.content }}<br/>
+                                {{ tableau.price }}<br/>
+                                {{ tableau.createdDate }}<br/>
+                            </p>
+                            <a href="{{ path('annoncementsDetail',{'id':tableau.id}) }}"
+                               class="waves-effect waves-light btn">detail</a>
+                            <a href="{{ path('annoucements') }}" class="waves-effect waves-light btn">Voir list</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    {% endblock body %}
