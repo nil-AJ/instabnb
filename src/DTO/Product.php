@@ -20,9 +20,7 @@ class Product
 
     /**
      * @var
-     * @Assert\Type(
-     *     type="integer",
-     *     message="The value {{ value }} is not a valid {{ type }}.")
+     * @Assert\Positive(),
      * @Assert\NotBlank()
      */
     private $price;

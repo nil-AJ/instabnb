@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\DTO\Product;
+use App\Entity\Annoncement;
 use App\Form\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,10 +29,10 @@ class AnnoncementsAddController extends abstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($product);
+            $adannoncements = new  Annoncement($product);
+            $entityManager->persist($adannoncements);
             $entityManager->flush();
-            $data = $form->getData();
-//            var_dump($data);
+
             return $this->redirectToRoute('home');
         }
 

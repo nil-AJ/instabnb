@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\DTO\Product;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -32,6 +33,7 @@ class Annoncement
     private $content;
 
     /**
+     * @var string A "Y-m-d H:i:s" formatted value
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $createdAt;
@@ -87,5 +89,14 @@ class Annoncement
         $this->createdAt = $createdAt;
 
         return $this;
+    }
+
+    public function __construct(Product $product)
+    {
+        $this ->title = $product->getTitle();
+        $this ->content = $product->getContent();
+        $this ->price = $product->getPrice();
+        $this ->createdAt = new \DateTime();
+
     }
 }
