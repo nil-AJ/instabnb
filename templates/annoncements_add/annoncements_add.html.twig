@@ -11,22 +11,26 @@
             <div class="row">
                 <div class="input-field col s12">
                     {{ form_widget(form.title, {'attr': {'class': 'validate', 'id:': 'title' }}) }}
-                    <label for="title">Title</label>
+
+                    <label for="title">
+                        {% trans into 'AnnoncementAdd.FR.YAML' %}Title{% endtrans %}
+                    </label>
+
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     {{ form_widget(form.content, {'attr': {'class': 'materialize-textarea', 'id:': 'textarea' }}) }}
-                    <label for="textarea">content</label>
+                    <label for="textarea">{% trans into 'AnnoncementAdd.FR.YAML' %}content{% endtrans %}</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     {{ form_widget(form.price, {'attr': {'class': 'validate', 'id:': 'price' }}) }}
-                    <label name="" for="price">price</label>
+                    <label name="" for="price">{% trans into 'AnnoncementAdd.FR.YAML' %}price{% endtrans %}</label>
                 </div>
             </div>
-            <button name="formaddcontact" type="submit" class="waves-effect waves-light btn-large">SAVE</button>
+            <button name="formaddcontact" type="submit" class="waves-effect waves-light btn-large">{% trans into 'AnnoncementAdd.FR.YAML' %}SAVE{% endtrans %}</button>
         </div>
         {{ form_end(form) }}
     {% endblock body %}
