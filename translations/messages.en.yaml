@@ -1,0 +1,14 @@
+annoncementsAdd:
+  Title: 'Title'
+  content: 'Content'
+  price: 'Price'
+  SAVE: 'Save'
+
+nav:
+  home: 'home'
+  list: 'list'
+  create: 'create'
+
+
+
+

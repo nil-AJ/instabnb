@@ -42,7 +42,7 @@ class AnnoncementsAddController extends AbstractController
 
 
     /**
-     * @Route("/annoucements/add",
+     * @Route("/annoucements/add/{_locale}",
      * name="annoucementsAdd",
      * methods={"GET","POST"}
      * )

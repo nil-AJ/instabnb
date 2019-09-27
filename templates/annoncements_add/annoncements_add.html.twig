@@ -13,7 +13,7 @@
                     {{ form_widget(form.title, {'attr': {'class': 'validate', 'id:': 'title' }}) }}
 
                     <label for="title">
-                        {% trans into 'AnnoncementAdd.FR.YAML' %}Title{% endtrans %}
+                        {{ "annoncementsAdd.Title"|trans({}, 'messages') }}
                     </label>
 
                 </div>
@@ -21,16 +21,16 @@
             <div class="row">
                 <div class="input-field col s12">
                     {{ form_widget(form.content, {'attr': {'class': 'materialize-textarea', 'id:': 'textarea' }}) }}
-                    <label for="textarea">{% trans into 'AnnoncementAdd.FR.YAML' %}content{% endtrans %}</label>
+                    <label for="textarea">{{ "annoncementsAdd.content"|trans({}, 'messages') }}</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     {{ form_widget(form.price, {'attr': {'class': 'validate', 'id:': 'price' }}) }}
-                    <label name="" for="price">{% trans into 'AnnoncementAdd.FR.YAML' %}price{% endtrans %}</label>
+                    <label name="" for="price">{{ "annoncementsAdd.price"|trans({}, 'messages') }}</label>
                 </div>
             </div>
-            <button name="formaddcontact" type="submit" class="waves-effect waves-light btn-large">{% trans into 'AnnoncementAdd.FR.YAML' %}SAVE{% endtrans %}</button>
+            <button name="formaddcontact" type="submit" class="waves-effect waves-light btn-large">{{ "annoncementsAdd.SAVE"|trans({}, 'messages') }}</button>
         </div>
         {{ form_end(form) }}
     {% endblock body %}

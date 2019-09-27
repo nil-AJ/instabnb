@@ -2,9 +2,9 @@
     <div class="nav-wrapper  blue darken-3">
         <a href="#!" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="{{ path('home') }}">{% trans into 'Nav.FR.YAML' %}home{% endtrans %}</a></li>
-            <li><a href="{{ path('annoucements') }}">{% trans into 'Nav.FR.YAML' %}list{% endtrans %}</a></li>
-            <li><a href="{{ path('annoucementsAdd') }}">{% trans into 'Nav.FR.YAML' %}create{% endtrans %}</a></li>
+            <li><a href="{{ path('home') }}">{{ "nav.home"|trans({}, 'messages') }}</a></li>
+            <li><a href="{{ path('annoucements') }}">{{ "nav.list"|trans({}, 'messages') }}</a></li>
+            <li><a href="{{ path('annoucementsAdd') }}">{{ "nav.create"|trans({}, 'messages') }}</a></li>
 
         </ul>
     </div>
