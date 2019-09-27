@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 class HomeController extends abstractController
 {
     /**
-     * @Route("/",name ="home")
+     * @Route("/{_locale}",name ="home")
      */
     public function home()
     {

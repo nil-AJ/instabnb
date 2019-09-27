@@ -9,6 +9,10 @@ nav:
   list: 'list'
   create: 'create'
 
+button:
+  detail: 'detail'
+  list: 'liste'
+
 
 
 

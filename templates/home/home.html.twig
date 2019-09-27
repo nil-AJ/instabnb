@@ -15,8 +15,8 @@
                                 {{ tableau.price }}<br/>
                                 {{ tableau.createdAt | date("m/d/Y") }}</p><br/>
                             <a href="{{ path('annoncementsDetail',{'id':tableau.id}) }}"
-                               class="waves-effect waves-light btn">detail</a>
-                            <a href="{{ path('annoucements') }}" class="waves-effect waves-light btn">Voir list</a>
+                               class="waves-effect waves-light btn">{{ "button.detail"|trans({}, 'messages') }}</a>
+                            <a href="{{ path('annoucements') }}" class="waves-effect waves-light btn">{{ "button.list"|trans({}, 'messages') }}</a>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AnnoncementsDetailController extends abstractController
 {
     /**
-     * @Route("/annoucementsss/{id}/detail", name="annoncementsDetail",requirements={"id"="\d+"})
+     * @Route("/annoucementsss/{id}/detail/{_locale}", name="annoncementsDetail",requirements={"id"="\d+"})
      */
     public function annoncementDetail($id)
     {

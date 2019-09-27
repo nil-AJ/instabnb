@@ -25,7 +25,7 @@ class AnnoncementsController extends abstractController
     }
 
     /**
-     * @Route("/annoucements/{page}",
+     * @Route("/annoucements/{page}/{_locale}",
      *     name="annoucements",
      *     defaults={"page"=1},
      *     requirements={"page"="\d+"})
