@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+
+        <h1></h1>
+<div style="margin: 50px">
+        {{ form_start(form) }}
+
+        {{ form_row(form.user_name, {'attr': {'placeholder': 'Votre prenom'}}) }}
+        {{ form_row(form.user_lastname) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.password) }}
+
+
+
+        <button type="submit" class="btn ">save</button>
+        {{ form_end(form) }}
+
+</div>
+
+    {% endblock body %}
