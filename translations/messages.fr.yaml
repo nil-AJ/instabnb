@@ -8,10 +8,19 @@ nav:
   home: 'acceuil'
   list: 'liste'
   create: 'ajouter'
+  connexion: 'connexion'
+  deconnexion: 'deconnecter'
+  signIn: 's enregistrer'
 
 button:
   detail: 'detail'
   list: 'liste'
+
+login:
+  login: 'se connnecter'
+  ok: 'vous etes connecter en tant que'
+  password: 'mot de passe'
+  submit: 'connecter'
 
 
 
