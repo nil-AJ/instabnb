@@ -1,8 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 
-    {{ id }}
-
-    <a href="{{ path('annoucements',{'id':id}) }}">retour à la liste</a>
+    <p>
+    {{ annonce.title }}<br>
+    {{ annonce.content }}<br/>
+    {{ annonce.price }}<br/>
+    {{ annonce.createdAt | date("m/d/Y") }}</p>
+    <a href="{{ path('annoucements',{'id':annonce.id}) }}">retour à la liste</a>
 
 {% endblock %}

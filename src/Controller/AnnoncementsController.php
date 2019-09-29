@@ -33,7 +33,6 @@ class AnnoncementsController extends abstractController
     public function annoucements()
     {
         $tableau = $this->userManager->findAnnoncements();
-        dump($tableau);
         return $this->render('annoncements/annoncements.html.twig',['tableau'=>$tableau]);
 
     }
